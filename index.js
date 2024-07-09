@@ -1,6 +1,6 @@
 function pizzaOrder() {
     return {
-        quantities: { small: 1, medium: 1, large: 1 },
+        quantities: { small: 0, medium: 0, large: 0 },
         prices: { small: 31.99, medium: 58.99, large: 87.99 },
         paymentAmount: '',
         message: 'Message goes here',
@@ -27,7 +27,13 @@ function pizzaOrder() {
         },
         checkout() {
             alert('Proceeding to checkout!');
-            // Implement checkout functionality here
+            this.resetOrder();
+        },
+        resetOrder() {
+            this.quantities = { small: 0, medium: 0, large: 0 };
+            this.paymentAmount = '';
+            this.message = '';
+            this.paymentMade = false;
         }
     };
 };
