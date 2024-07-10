@@ -22,11 +22,11 @@ function pizzaOrder() {
                 this.message = 'Payment successful!';
                 this.paymentMade = true;
             } else {
-                this.message = 'Insufficient amount. Please pay the full amount.';
+                this.message = 'Sorry - that is not enough money!';
             }
         },
         checkout() {
-            alert('Proceeding to checkout!');
+            alert('Enjoy your pizza!');
             this.resetOrder();
         },
         resetOrder() {
